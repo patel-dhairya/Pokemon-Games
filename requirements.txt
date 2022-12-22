@@ -1,0 +1,4 @@
+Scrapy~=2.7.1
+itemloaders~=1.0.6
+itemadapter~=0.7.0
+pandas~=1.5.2
