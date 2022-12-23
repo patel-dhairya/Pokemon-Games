@@ -1,16 +1,9 @@
 from scrapy import Item, Field
-from itemloaders.processors import TakeFirst
-from scrapy.loader.processors import Compose
+from itemloaders.processors import TakeFirst, Compose
 
 
 def int_stats(ls):
     return list(map(int, ls))
-
-#
-# def dual_types(ls):
-#     if len(ls) == 1:
-#         return ls[0], None
-#     return ls
 
 
 class PokemonDataItem(Item):
@@ -21,7 +14,6 @@ class PokemonDataItem(Item):
         output_processor=TakeFirst()
     )
     pokemon_type = Field(
-        # input_processor=Compose(dual_types, )
     )
     pokemon_stats = Field(
         input_processor=Compose(int_stats, )
