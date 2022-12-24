@@ -14,7 +14,6 @@ def clean_data(file_name, clean=False):
 
     with open(file_name) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
-        line_count = 0
 
         _ = next(csv_reader)
         for pokemon in csv_reader:
